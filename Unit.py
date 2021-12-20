@@ -1,3 +1,4 @@
+
 class Unit(object):
 
 	def __init__(self, name, country):
@@ -9,8 +10,8 @@ class Unit(object):
 
 	def shot(self, enemy):
 		enemy.armor = enemy.armor - self.damage
-		print(enemy.name, enemy.armor)	
-		return "Bah-bah"
+		print(f'{self.name} наснёс урон {enemy.name} в размере {self.damage} - здоровье {enemy.name} = {enemy.armor}')	
+			
 
 
 
@@ -19,7 +20,8 @@ class Unit(object):
 		return "Sir, Yes sir"
 
 
-tank = Unit('leha', 'sssr')
-tank2 = Unit('john', 'usa')
+tank = Unit('red', 'sssr')
+tank2 = Unit('blue', 'usa')
 
 tank.shot(tank2)
+print(tank2.armor)
